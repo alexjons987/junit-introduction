@@ -272,4 +272,15 @@ class CalculatorTest {
         // Assert
         assertEquals(9999, max);
     }
+
+    @Test
+    void max_throws_exception_given_empty_list() {
+        // Arrange
+        List<Integer> n = List.of();
+
+        // Act + Assert
+        assertThrows(IllegalArgumentException.class, () -> {
+            Calculator.max(n);
+        });
+    }
 }
