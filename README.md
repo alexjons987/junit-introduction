@@ -51,3 +51,17 @@ of absolute value, checking if a number is even, and calculation of the maximum 
 * Lists with e.g. 10,000 elements should be handled without performance errors.
 ### 19. isEven should return the correct value for very large numbers
 * `isEven(Integer.MAX_VALUE)` → `false`
+# Calculator with Logger (Mocking)
+### Scenario:
+Now you will mock a Logger and test that Calculator logs correctly without actually writing to
+the console or file.
+### Logger interface:
+```java
+public interface Logger {
+    void log(String message);
+}
+```
+### Task:
+1. Create a class `CalculatorWithLogger` that takes a `Logger` in the constructor.
+2. The methods `add(int a, int b)` and `divide(int a, int b)` should **log each operation**.
+3. If division by zero is attempted, an `IllegalArgumentException` should be thrown and `"Attempted divide by zero"` should be logged.
